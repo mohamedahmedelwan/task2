@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="er" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cascading-style-sheets</title>
+    <style>
+        th{background-color: rgb(187, 177, 36);color: white;}
+    </style>
+</head>
+<body style="background-color: aliceblue;">
+    <h1 style="text-align: center;">معهد الدلتا العالى</h1>
+    <h1 style="text-align: center;line-height: 0px;">لنظم المعلومات الاداريه والمحاسبيه</h1>
+    <h4 style="text-align: center;color: rgba(0, 0, 0, 0.458);">مادة تطبيقات  الانترنت والمنصات اإللكرتونية</h4>
+    <h1 style="color: rgb(190, 178, 12);text-align: center;font-size:200px;">CSS</h1>
+    
+    <table border="2" style="height: 200px;width: 500px;text-align: center;margin: auto;">
+        <tr>
+        <td>محمد احمد السيد محمد علوان</td>
+        <th> اسم الطالب</th>
+    </tr>
+    <tr>
+        <td>2503108</td>
+        <th>الرقم الجامعى</th>
+    </tr>
+    <tr>
+        <td>115</td>
+        <th>رقم  السكشن</th>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <th>عنوان التقرير</th>
+    </tr>
+    </table>
+    <hr>
+    <br>
+    <img src="download.jpg" alt="css"  style="margin: auto;display: block;height: 400px;">
+    <br>
+    <h2>المقدمة</h2>
+<p>تُعد لغة <strong>CSS</strong> (اختصار <b>Cascading Style Sheets</b> أي «أوراق الأنماط المتتالية») إحدى التقنيات الأساسية الثلاث لصفحات الويب، إلى جانب <b>HTML</b> و<b>JavaScript</b>. فبينما تحدد HTML محتوى الصفحة وهيكلها من عناوين وفقرات وصور، تتولى CSS تحديد الشكل الذي تظهر به هذه العناصر أمام المستخدم، من ألوان وخطوط ومسافات وطريقة ترتيب.</p>
+<p>اقترح <strong>هوكون فييوم لي</strong> فكرة CSS عام <b>1994</b>، وصدر أول إصدار رسمي منها (CSS1) كتوصية من منظمة <b>W3C</b> في ديسمبر <b>1996</b>، ولا تزال المنظمة مسؤولة عن تطوير مواصفاتها حتى اليوم. وتكمن أهميتها في أنها <strong>تفصل المحتوى عن التصميم</strong>؛ إذ تُكتب قواعد التنسيق مرة واحدة في ملف مستقل وتُطبق على عدد كبير من الصفحات، مما يوفر الوقت ويجعل الموقع متناسقًا وسهل التعديل وجذابًا على مختلف الأجهزة.</p>
+
+<h2>عرض الموضوع</h2>
+
+<ol>
+  <li>
+    <strong>بنية قاعدة CSS</strong>
+    <p>بدون CSS تظهر الصفحة نصًا أسود على خلفية بيضاء، وبها يمكن تغيير الألوان والخطوط والمسافات وترتيب العناصر. وتتكون القاعدة من:</p>
+    <ul>
+      <li><b>المحدد (Selector):</b> يحدد العنصر المراد تنسيقه.</li>
+      <li><b>الخاصية (Property):</b> ما نريد تغييره.</li>
+      <li><b>القيمة (Value):</b> القيمة الجديدة للخاصية.</li>
+    </ul>
+    <p>في المثال التالي تجعل القاعدة كل عناوين h1 بلون أزرق وبحجم خط 32 بكسل:</p>
+    <p>
+      h1 {<br>
+      color: #1a5fb4;<br>
+      font-size: 32px;<br>
+      }
+    </p>
+  </li>
+
+  <li>
+    <strong>طرق ربط CSS بصفحة HTML</strong>
+    <p>هناك ثلاث طرق:</p>
+    <ul>
+      <li><b>الخارجية:</b> ملف css. منفصل، وهي الأفضل لأنها تخدم صفحات كثيرة.</li>
+      <li><b>الداخلية:</b> وسم style في رأس الصفحة.</li>
+      <li><b>المضمّنة:</b> خاصية style على عنصر واحد.</li>
+    </ul>
+    <p>
+      &lt;link rel="stylesheet" href="styles.css"&gt; (External)<br>
+      &lt;style&gt; p { color: gray; } &lt;/style&gt; (Internal)<br>
+      &lt;h1 style="color: red;"&gt;Hello&lt;/h1&gt; (Inline)
+    </p>
+  </li>
+
+  <li>
+    <strong>المحددات والألوان والخطوط</strong>
+    <p>تسمح المحددات باختيار العناصر بحسب:</p>
+    <ul>
+      <li>الوسم مثل <b>p</b></li>
+      <li>الفئة <b>(class)</b> وتبدأ بنقطة</li>
+      <li>المعرف <b>(id)</b> ويبدأ بعلامة #</li>
+    </ul>
+    <p>ويمكن تحديد اللون بالاسم أو بالرمز السداسي #1a5fb4 أو بالدالة rgb()، ويُختار الخط بالخاصية <b>font-family</b> مع خط بديل احتياطي:</p>
+    <p>
+      .card { background-color: #f4f6f8; } /* class */<br>
+      #title { text-align: center; } /* id */<br>
+      body { font-family: Arial, sans-serif; color: #222222; }
+    </p>
+  </li>
+
+  <li>
+    <strong>نموذج الصندوق (Box Model)</strong>
+    <p>يُعامل كل عنصر كصندوق من أربع طبقات من الداخل إلى الخارج:</p>
+    <ol>
+      <li>المحتوى</li>
+      <li>الحشو الداخلي <b>padding</b></li>
+      <li>الحد <b>border</b></li>
+      <li>الهامش الخارجي <b>margin</b></li>
+    </ol>
+    <p>وبشكل افتراضي يطبق العرض width على المحتوى فقط، أما <b>box-sizing: border-box</b> فتجعله يشمل الحشو والحد أيضًا:</p>
+    <p>
+      .box {<br>
+      width: 300px;<br>
+      padding: 20px;<br>
+      border: 2px solid #1a5fb4;<br>
+      margin: 10px;<br>
+      box-sizing: border-box;<br>
+      }
+    </p>
+  </li>
+
+  <li>
+    <strong>لمسات الجمال: التأثيرات عند التفاعل</strong>
+    <p>تضيف CSS حيوية للصفحة عبر الفئة الشبيهة <b>hover:</b> التي تُطبق التنسيق عند مرور الفأرة، مع <b>transition</b> لجعل التغيير سلسًا:</p>
+    <p>
+      .button { background-color: #1a5fb4; color: white; border-radius: 8px; transition: background-color 0.3s; }<br>
+      .button:hover { background-color: #0b3d80; }
+    </p>
+  </li>
+
+  <li>
+    <strong>التصميم المتجاوب مع الشاشات</strong>
+    <p>يهدف إلى ظهور الصفحة بشكل جيد على الهاتف والحاسوب، ويعتمد على:</p>
+    <ul>
+      <li><b>استعلامات الوسائط (Media Queries):</b> تطبق تنسيقات عند تحقق شرط كعرض الشاشة.</li>
+      <li><b>Flexbox:</b> للترتيب في اتجاه واحد.</li>
+      <li><b>Grid:</b> للترتيب في بعدين.</li>
+    </ul>
+    <p>المثال التالي يرتب العناصر بجانب بعضها عندما يبلغ عرض الشاشة 600 بكسل أو أكثر:</p>
+    <p>
+      @media screen and (width &gt;= 600px) {<br>
+      .wrapper { display: flex; }
+      }
+    </p>
+  </li>
+</ol>
+
+<h2>المراجع</h2>
+<ol>
+  <li>MDN Web Docs. "What is CSS?" <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS" target="_blank">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS</a></li>
+  <li>MDN Web Docs. "The box model." <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model" target="_blank">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model</a></li>
+  <li>MDN Web Docs. "Responsive web design." <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design</a></li>
+  <li>W3C. "Cascading Style Sheets." <a href="https://www.w3.org/Style/CSS/" target="_blank">https://www.w3.org/Style/CSS/</a></li>
+  <li>IEEE Technology Navigator. "Cascading Style Sheets." <a href="https://technav.ieee.org/topic/cascading-style-sheets/" target="_blank">https://technav.ieee.org/topic/cascading-style-sheets/</a></li>
+</ol>
+</body>
+</html>
